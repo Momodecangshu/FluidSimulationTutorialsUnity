@@ -30,4 +30,9 @@ Material:
     m_Floats:
     - radius: 0.001
     m_Colors:
+<<<<<<< HEAD
     - pointerpos: {r: 335.01236, g: 451.95062, b: 0, a: 0}
+=======
+    - pointerpos: {r: 506.00757, g: 360.05777, b: 0, a: 0}
+  m_BuildTextureStacks: []
+>>>>>>> 33c11bdfd6ce5b4669b5c37773f6f57b8d7bceb2

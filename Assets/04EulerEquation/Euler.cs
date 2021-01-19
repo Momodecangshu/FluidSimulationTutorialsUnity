@@ -85,6 +85,10 @@ public class Euler : MonoBehaviour
     {
         Prepare();
         //试一下把DyeRT改成VelocityRT/DivergenceRT/PressureRT会出现什么？
+<<<<<<< HEAD
         Graphics.Blit(DyeRT, destination);
+=======
+        Graphics.Blit(DivergenceRT, destination);
+>>>>>>> 33c11bdfd6ce5b4669b5c37773f6f57b8d7bceb2
     }
 }
