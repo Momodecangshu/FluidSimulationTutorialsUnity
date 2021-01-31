@@ -8,7 +8,6 @@ div2 = np.zeros((nmax))
 dx = 1
 for i in range(1,nmax-2):
     v[i] = i#这步假设了一个初始有散度的速度场
-#应当总散度值为零，否则最后压力无法收敛
 for i in range(1,nmax-1):
     div[i] = (v[i]-v[i-1])/dx
 p = np.zeros((tmax,nmax))

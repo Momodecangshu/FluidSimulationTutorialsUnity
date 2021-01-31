@@ -41,11 +41,11 @@ dx = 1 / nmax
 dy = 1 / mmax
 rho = 10
 
-# 后台阶流初始速度条件，保证入口总速度和出口总速度一样
+# 后台阶流初始速度条件
 bfs = int(mmax/2)  # 后台阶高度
 bfsw = 3#后台阶宽度
 u[0, bfs:mmax+1] = 1
-u[nmax, 2:mmax] = (mmax - bfs + 1)/(mmax-2)
+u[nmax,2:mmax] = (mmax-bfs+1)/(mmax-2)
 block = np.zeros((nmax+2,mmax+2))
 for i in range(0,bfsw):
     for j in range(0,bfs):

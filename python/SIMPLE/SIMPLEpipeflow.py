@@ -39,13 +39,12 @@ dx = 1 / nmax
 dy = 1 / mmax
 rho = 1
 
-# Pipe Flow初始速度条件，保证入口总速度和出口总速度一样
-# 这样才能满足初始速度总散度为零的条件，从而能够算出正确的压力
+# Pipe Flow初始速度条件
 u[0, 1:mmax+1] = 1
-u[nmax, 2:mmax] = mmax/(mmax-2)
+u[nmax,2:mmax] = mmax/(mmax-2)
 
-alpha_uv = 0.3  # 速度动量方程中的松弛系数
-alpha_p = 0.2  # 校正压力时的松弛系数
+alpha_uv = 0.2  # 速度动量方程中的松弛系数
+alpha_p = 0.3  # 校正压力时的松弛系数
 
 for t in range(0, tmax):
     u_star = u.copy()

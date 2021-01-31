@@ -48,7 +48,7 @@ sty = 3#左下角
 edx = 6#右上角
 edy = 5#右上角
 u[0, 1:mmax+1] = 1
-u[nmax, 2:mmax] = mmax/(mmax-2)
+u[nmax,1:mmax+1] = 1
 block = np.zeros((nmax+2,mmax+2))
 for i in range(stx,edx):
     for j in range(sty,edy):

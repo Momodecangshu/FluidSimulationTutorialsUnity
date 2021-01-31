@@ -4,7 +4,7 @@ import numpy as np
 # 教程 https://zhuanlan.zhihu.com/p/347410166
 
 nmax = 8  # 有多长
-mmax = 8  # 有多高
+mmax = 10  # 有多高
 tmax = 20
 u = np.zeros((nmax + 1, mmax + 2))  # 每回合初始猜的，和最终值
 u_star = np.zeros((nmax + 1, mmax + 2))  # 用于迭代
@@ -39,10 +39,9 @@ dx = 1 / nmax
 dy = 1 / mmax
 rho = 10
 
-# 后台阶流初始速度条件，保证入口总速度和出口总速度一样
 bfs = int(mmax/2)  # 后台阶高度
 u[0, bfs:mmax+1] = 1
-u[nmax, 2:mmax] = (mmax - bfs + 1)/(mmax-2)
+u[nmax,2:mmax] = (mmax-bfs+1)/(mmax-2)
 
 alpha_uv = 0.3  # 速度动量方程中的松弛系数
 alpha_p = 0.2  # 校正压力时的松弛系数
